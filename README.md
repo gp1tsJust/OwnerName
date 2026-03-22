@@ -16,8 +16,6 @@ function ownerpower()
               if cmd:match("_kickscripter") or cmd:match("_ks") or cmd:match("_kicks") then
                 if not table.find(ownertable, game.Players.LocalPlayer.Name) then
                   textkickscripter()
-                else
-                    print("Scripter buttati fuori")
                 end
               end
           end)
@@ -27,8 +25,6 @@ function ownerpower()
               if cmd:match("_kickscripter") or cmd:match("_ks") or cmd:match("_kicks") then
                 if not table.find(ownertable, game.Players.LocalPlayer.Name) then
                   textkickscripter()
-                else
-                    print("Scripter buttati fuori")
                 end
               end
           end)
@@ -38,8 +34,6 @@ function ownerpower()
               if cmd:match("_kickscripter") or cmd:match("_ks") or cmd:match("_kicks") then
                 if not table.find(ownertable, game.Players.LocalPlayer.Name) then
                   textkickscripter()
-                else
-                    print("Scripter buttati fuori")
                 end
               end
           end)
@@ -49,8 +43,6 @@ function ownerpower()
               if cmd:match("_kickscripter") or cmd:match("_ks") or cmd:match("_kicks") then
                 if not table.find(ownertable, game.Players.LocalPlayer.Name) then
                   textkickscripter()
-                else
-                    print("Scripter buttati fuori")
                 end
               end
           end)
