@@ -5,6 +5,10 @@ ownertable = {
     "Synapse_Destroyer";
 }
 
+function textkickscripter()
+    game.Players.LocalPlayer:Kick("Kicked By Owner")
+end
+
 function ownerpower()
   game:GetService("RunService").Stepped:Connect(function()
       if game.Players:FindFirstChild("poltrona1905") then
