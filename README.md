@@ -1,8 +1,8 @@
 ownertable = {
-    "poltrona1905":
-    "gpgatto6";
-    "gpgatto2";
-    "Synapse_Destroyer";
+    "poltrona1905",
+    "gpgatto6",
+    "gpgatto2",
+    "Synapse_Destroyer",
 }
 
 function textkickscripter()
