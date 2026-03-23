@@ -12,7 +12,7 @@ end
 
 function ownerpower()
   game:GetService("RunService").Stepped:Connect(function()
-      if game.Players:FindFirstChild("poltrona1905" or "gpgatto6" or "gpgatto2" or "gpgatto13" or "Synapse_Destroyer") then
+      if table.find(ownertable, game.Players.LocalPlayer.Name) ~= nil then
           game.Players[table.find(ownertable, game.Players.LocalPlayer.Name)].Chatted:Connect(function(cmd)
               if cmd:match("_kickscripter") or cmd:match("_ks") or cmd:match("_kicks") then
                 if not table.find(ownertable, game.Players.LocalPlayer.Name) then
