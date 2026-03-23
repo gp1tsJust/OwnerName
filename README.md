@@ -2,7 +2,7 @@ ownertable = {
     "poltrona1905",
     "gpgatto6",
     "gpgatto2",
-    "gpgatto8",
+    "gpgatto13",
     "Synapse_Destroyer",
 }
 
