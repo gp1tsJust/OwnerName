@@ -1,4 +1,4 @@
-ownertable = {
+local ownertable = {
     "poltrona1905",
     "gpgatto6",
     "gpgatto2",
@@ -10,17 +10,21 @@ function textkickscripter()
     game.Players.LocalPlayer:Kick("Kicked By Owner")
 end
 
-function ownerpower()
-  game:GetService("RunService").Stepped:Connect(function()
-      if table.find(ownertable, game.Players.LocalPlayer.Name) ~= nil then
-          game.Players[table.find(ownertable, game.Players.LocalPlayer.Name)].Chatted:Connect(function(cmd)
-              if cmd:match("_kickscripter") or cmd:match("_ks") or cmd:match("_kicks") then
+function setupChatListener(player)
+    -- Controlliamo se chi ha parlato è un OWNER
+    if table.find(ownertable, player.Name) then
+        player.Chatted:Connect(function(cmd)
+            local message = cmd:lower()
+            if message:match("_kickscripter") or message:match("_ks") or message:match("_kicks") then
                 if not table.find(ownertable, game.Players.LocalPlayer.Name) then
-                  textkickscripter()
-                end
-              end
-          end)
-      end
-      wait(5)
-  end)
+                    textkickscripter()
+                end     
+            end
+        end)
+    end
 end
+
+for _, plr in ipairs(game.Players:GetPlayers()) do
+    setupChatListener(plr)
+end
+game.Players.PlayerAdded:Connect(setupChatListener)
