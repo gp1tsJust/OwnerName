@@ -1,3 +1,5 @@
+local NotificationLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/Suricato006/Scripts-Made-by-me/master/Libraries/Notification%20Library%20Optimization.lua"))()
+
 local ownertable = {
     "poltrona1905",
     "gpgatto6",
@@ -22,6 +24,8 @@ function ownerpower()
                             if msg:match("_kickscripter") or msg:match("_ks") or msg:match("_kicks") then
                                 if not table.find(ownertable, game.Players.LocalPlayer.Name) then
                                     textkickscripter()
+                                else
+                                    NotificationLibrary.CustomNotification("1tsJustScript", "Scripter Got Kicked ", 5)
                                 end
                             end
                         end)
