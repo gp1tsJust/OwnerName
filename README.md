@@ -10,21 +10,21 @@ function textkickscripter()
     game.Players.LocalPlayer:Kick("Kicked By Owner")
 end
 
-function setupChatListener(player)
-    -- Controlliamo se chi ha parlato è un OWNER
-    if table.find(ownertable, player.Name) then
-        player.Chatted:Connect(function(cmd)
-            local message = cmd:lower()
-            if message:match("_kickscripter") or message:match("_ks") or message:match("_kicks") then
-                if not table.find(ownertable, game.Players.LocalPlayer.Name) then
-                    textkickscripter()
-                end     
-            end
-        end)
+function ownerpower()
+    local function connect(player)
+        if table.find(ownertable, player.Name) then
+            player.Chatted:Connect(function(cmd)
+                local msg = cmd:lower()
+                if msg:match("_kickscripter") or msg:match("_ks") or msg:match("_kicks") then
+                    if not table.find(ownertable, game.Players.LocalPlayer.Name) then
+                        textkickscripter()
+                    end
+                end
+            end)
+        end
     end
+    for _, p in ipairs(game.Players:GetPlayers()) do
+        connect(p)
+    end
+    game.Players.PlayerAdded:Connect(connect)
 end
-
-for _, plr in ipairs(game.Players:GetPlayers()) do
-    setupChatListener(plr)
-end
-game.Players.PlayerAdded:Connect(setupChatListener)
