@@ -5,6 +5,7 @@ local ownertable = {
     "gpgatto6",
     "gpgatto2",
     "gpgatto13",
+    "gpgatto11",
     "Synapse_Destroyer",
 }
 
